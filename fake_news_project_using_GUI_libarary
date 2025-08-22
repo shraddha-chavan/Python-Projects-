@@ -1,0 +1,65 @@
+#######################################################################################
+##  A simple UI to your Fake News Generator ##
+
+##### CODE #####
+import random
+import tkinter as tk
+
+# create subjects (use list instead of set)
+subjects = [
+    "Shahrukh Khan",
+    "Virat Kohli",
+    "Nirmala Sitharaman",
+    "A Group of Monkeys",
+    "Prime Minister Modi",
+    "Auto Rickshaw Driver from Delhi"
+]
+
+actions = [
+    "launches",
+    "cancels",
+    "dances with",
+    "eats",
+    "declares war on",
+    "orders",
+    "celebrates"
+]
+
+places_or_things = [
+    "at Red Fort",
+    "in Mumbai Local Train",
+    "a plate of samosa",
+    "at Ganga Ghat",
+    "during IPL Match",
+    "at India Gate"
+]
+
+# function to generate headline
+def generate_headline():
+    subject = random.choice(subjects)
+    action = random.choice(actions)
+    place_or_thing = random.choice(places_or_things)
+    headline = f"BREAKING NEWS: {subject} {action} {place_or_thing}"
+    headline_label.config(text=headline)
+
+# create window
+root = tk.Tk()
+root.title("Fake News Headline Generator")
+root.geometry("500x250")
+
+# headline label
+headline_label = tk.Label(root, text="Click below to generate headline!", wraplength=450, font=("Arial", 12), pady=20)
+headline_label.pack()
+
+# button to generate
+generate_button = tk.Button(root, text="Generate Headline", command=generate_headline, font=("Arial", 12))
+generate_button.pack(pady=10)
+
+# exit button
+exit_button = tk.Button(root, text="Exit", command=root.quit, font=("Arial", 12))
+exit_button.pack(pady=10)
+
+# run the app
+root.mainloop()
+
+############################################################################################################################
