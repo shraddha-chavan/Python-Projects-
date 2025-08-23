@@ -1,7 +1,7 @@
 # Python-Projects-
 I am learning Python by building small basic projects and practicing core programming concepts.
 
-1) Fake_News_Generater_Using_GUI_Library
+1) Fake_News_Generater_Using_GUI_Library .
 
    
 
